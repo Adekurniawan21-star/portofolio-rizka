@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #070a09;
+  --surface: #0e1412;
+  --line: #1a2823;
+  --text: #e8f0ec;
+  --muted: #8a9b94;
+  --accent: #34c48b;
+  /* hijau emerald */
+  --accent-2: #22a6a0;
+  /* teal */
+  --gradient: linear-gradient(135deg, #34c48b 0%, #22a6a0 60%, #1b7f8a 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(800px 500px at 90% -10%, rgba(52, 196, 139, 0.14), transparent 60%),
+    radial-gradient(700px 500px at 5% 35%, rgba(34, 166, 160, 0.09), transparent 60%),
+    radial-gradient(600px 400px at 70% 100%, rgba(27, 127, 138, 0.10), transparent 60%),
+    linear-gradient(180deg, #070a09 0%, #08100d 50%, #070a09 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  background: linear-gradient(160deg, rgba(52, 196, 139, 0.06), rgba(14, 20, 18, 0.9) 40%);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(34, 166, 160, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: #03100b;
+}
+
+.btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent-2);
+}
